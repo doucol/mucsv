@@ -42,6 +42,9 @@ func main() {
 			if err != nil {
 				log.Fatalln(err)
 			}
+			if len(members.Members) <= 0 {
+				break
+			}
 			for _, member := range members.Members {
 				if !headerWritten {
 					headers := convertToHeaders(member)
